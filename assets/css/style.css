@@ -5,10 +5,17 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --primary-color: #4A8399;
+    --secondary-color: #375666;
+    --tertiary-color: #FFFAF0;
+}
+
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
-    background: #FFFAF0;
+    background: var(--tertiary-color);
     
 }
 
@@ -21,19 +28,19 @@ a {
 }
 
 
-
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 35px 60px;
+    padding: 35px 70px;
     align-items: flex-end;
 }
 
 h1 a {
     color: #000;
 }
+
 header nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -44,8 +51,8 @@ header nav ul {
 
 header nav ul li a {
     padding: 5px;
-    color: #4A8399;
-    border-bottom: #4A8399 solid 2px;
+    color: var(--primary-color);
+    border-bottom: var(--primary-color) solid 2px;
     margin: 20px;
 }
 
@@ -76,7 +83,7 @@ section {
 }
 
 .hero h2 {
-    color: #FFFAF0;  
+    color: var(--tertiary-color);  
 }
 
 
@@ -90,9 +97,9 @@ section {
 
 .title h2 {
     font-size: xx-large;
-    color: #375666;
-    border-right: #375666 solid 3px;
-    padding: 0 15px 0 55px;
+    color: var(--secondary-color);
+    border-right: var(--secondary-color) solid 3px;
+    padding: 0 15px;
     text-align: right;
 }
 
@@ -125,9 +132,25 @@ section {
     display: flex;
     padding: 10px 0;
     align-items: flex-end;
-    border: #4A8399 solid 3px;
+    border: var(--primary-color) solid 3px;
     margin: 10px
 }
+
+.work a::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+
+.work a:hover::after {
+    opacity: 0;
+}
+
 
 a.project1 {
     background-image: url(../images/project1.jpg);
@@ -152,12 +175,13 @@ a.project5 {
 }
 
 .work-topic {
-    background: #4A8399;
-    padding: 4px 12px
+    background: var(--primary-color);
+    padding: 4px 12px;
+    z-index: 1;
 }
 
 .work-topic h3, .work-topic p {
-    color: #FFFAF0;
+    color: var(--tertiary-color);
 }
 
 .work-topic h3 {
@@ -176,18 +200,53 @@ a.project5 {
     align-items: center;
 }
 
-.contact ul li {
-
-}
-
 .contact ul li a {
     padding: 0 5px;
-    color: #375666;
-    border-bottom: #375666 solid 2px;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) solid 2px;
     margin: 0 20px;
 }
 
 .contact ul li a:hover  {
     border-bottom : none;
     color: #000;
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .title h2 {
+        border-bottom: var(--secondary-color) solid 3px;
+        border-right: none;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header nav ul li a {
+        margin: 10px;
+    }
 }
