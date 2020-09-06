@@ -159,26 +159,30 @@ a.project1 {
 }
 
 a.project2 {
-    background-image: url(../images/run-buddy.jpg);
+    background-image: url(../images/git-cooking.jpg);
 }
 
-a.project3 {
+a.note-taker {
+    background-image: url(../images/note-taker.jpg);
+}
+
+a.password-generator {
     background-image: url(../images/password-generator.jpg);
 }
 
-a.project4 {
+a.code-quiz {
     background-image: url(../images/code-quiz.jpg);
 }
 
-a.project5 {
-    background-image: url(../images/taskmaster-pro.jpg);
+a.tech-blog {
+    background-image: url(../images/tech-blog.jpg);
 }
 
-a.project6 {
+a.workday-scheduler {
     background-image: url(../images/work-day-scheduler.jpg);
 }
 
-a.project7 {
+a.weather-dashboard {
     background-image: url(../images/weather-dashboard.jpg);
 }
 
